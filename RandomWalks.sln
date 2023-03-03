@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomWalks", "RandomWalks\RandomWalks.csproj", "{B6F88109-21A9-4B74-850C-10755F2835D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3836ACD0-EADB-43FE-BB28-0A0AA975B449}"
+	ProjectSection(SolutionItems) = preProject
+		RandomWalks\bin\Debug\net6.0\results.txt = RandomWalks\bin\Debug\net6.0\results.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6F88109-21A9-4B74-850C-10755F2835D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F88109-21A9-4B74-850C-10755F2835D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F88109-21A9-4B74-850C-10755F2835D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F88109-21A9-4B74-850C-10755F2835D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4449FD7-D30C-498A-9E58-A548C0779BD0}
+	EndGlobalSection
+EndGlobal
