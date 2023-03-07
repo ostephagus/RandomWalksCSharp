@@ -8,7 +8,7 @@ namespace RandomWalks
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            (double, double)[,] results = Simulate(6, 100);
+            (double, double)[,] results = Simulate(42, 1000);
             sw.Stop();
             Console.WriteLine($"Time taken: {sw.ElapsedMilliseconds}ms");
             File.WriteAllText("results.txt", ConvertToPythonString(results));
