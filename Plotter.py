@@ -38,7 +38,7 @@ def GetColourList(originalColourList, numOfColours):
     colourSpacing = originalListLength // numOfColours
     return originalColourList[0:numOfColours*colourSpacing:colourSpacing]
 
-randomWalkData = getDoubleList("./RandomWalks/bin/Debug/net6.0/intermediateresults.bin")
+randomWalkData = getDoubleList("C:/Users/Owner/OneDrive/Documents/Coding/C#/RandomWalks/RandomWalks/bin/Debug/net6.0/intermediateresults.bin")
 
 splitUpCoordinates = SplitCoordinates(randomWalkData)
 

@@ -18,13 +18,15 @@ namespace RandomWalks
                 Console.WriteLine($"{e.Message}, defaulting to 1 particle and 100 iterations.");
             }
 
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
+            Stopwatch calculationStopwatch = new Stopwatch();
+            calculationStopwatch.Start();
             (double, double)[,] results = Simulate(numOfParticles, iterations);
-            sw.Stop();
-            Console.WriteLine($"Time taken: {sw.ElapsedMilliseconds}ms");
-            //File.WriteAllText("results.txt", ConvertToPythonString(results));
-            WriteDoubleTuple2DArray(results, "intermediateresults.bin");
+            calculationStopwatch.Stop();
+            Stopwatch dataWritingStopwatch = new Stopwatch();
+            dataWritingStopwatch.Start();
+            WriteData(results, "intermediateresults.bin");
+            dataWritingStopwatch.Stop();
+            Console.WriteLine($"Calculation took {calculationStopwatch.ElapsedMilliseconds}ms, data writing took {dataWritingStopwatch.ElapsedMilliseconds}ms.");
         }
 
         static (int, int) GetCMDArgs(string[] args)
@@ -52,7 +54,7 @@ namespace RandomWalks
             return (numOfParticles, iterations);
         }
 
-        static void WriteDoubleTuple2DArray((double, double)[,] doubles, string filename)
+        static void WriteData((double, double)[,] doubles, string filename)
         {
             FileStream outputStream = new FileStream(filename, FileMode.Create, FileAccess.ReadWrite);
             BinaryWriter writer = new BinaryWriter(outputStream);
