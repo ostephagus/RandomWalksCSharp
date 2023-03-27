@@ -62,13 +62,10 @@ namespace RandomWalks
             writer.Write(doubles.GetLength(0));
             writer.Write(doubles.GetLength(1));
 
-            for (int i = 0; i < doubles.GetLength(0); i++)
+            foreach ((double, double) doubleTuple in doubles)
             {
-                for (int j = 0; j < doubles.GetLength(1); j++)
-                {
-                    writer.Write(doubles[i, j].Item1);
-                    writer.Write(doubles[i, j].Item2);
-                }
+                writer.Write(doubleTuple.Item1);
+                writer.Write(doubleTuple.Item2);
             }
             outputStream.Close();
         }
