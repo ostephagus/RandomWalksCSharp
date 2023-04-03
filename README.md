@@ -1,6 +1,6 @@
 # RandomWalks
 A C# project for computing random walks for multiple bodies. The computation is done in C# and then the results are passed over to a plotter written in Python.
-## What is a random walk?
+## What is a _random walk_?
 A random *step* is defined as a movement of distance one unit in a random direction. In the code, the angle of step is chosen randomly. Therefore, a random *walk* is the aggregation of these steps into a random-seeming path. This is what is output and plotted.
 ## Overview of the code
 The C# program includes a Particle class which contains methods for walking randomly and getting the position. The rest of the python code manages the iteration of this process for a number of parallel Particles to create the plots.
