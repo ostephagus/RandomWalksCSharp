@@ -8,4 +8,3 @@ The C# program then outputs this data to a file (which takes a long time for mor
 The python program then reads in the data, unzips the coordinates (since MatPlotLib requires the coordinates split) and passes them to a Plot function to plot them. A function also rotates the colour each time so the Particles' trails are coloured differently
 ## Future plans
 * Possibly a CLI for the entire project - to make the computation (C#) and plotting (Python/MatPlotLib) happen sequentially without the user running the 2 currently separate programs manually. The CLI will also allow variables to be passed (number of Particles and number of iterations) and will plot this seamlessly.
-* Improving the passing of data between the simulator and plotter - currently this done through a text file which is inefficient.
